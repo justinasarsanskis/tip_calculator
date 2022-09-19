@@ -1,0 +1,9 @@
+print("This is a Tip Calculator")
+bill_size = int(input("How big is the bill?\n"))
+tip_size = int(input ("How much percent of tip you want to leave?\n"))
+pepos = int(input("How many persons will share the bill?\n"))
+
+count = round(bill_size * (1+tip_size/100)/pepos,3)
+finalTotal = "{:.2f}".format(count)
+
+print(f"{bill_size}$ bill with {tip_size}% tip and {pepos} persons sharing, makes it {finalTotal}$ each.")
